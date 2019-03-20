@@ -1,0 +1,66 @@
+
+html, body {
+    margin: 0 0;
+    padding: 0 0;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    margin: 0 0;
+    padding: 3px 3px;
+}
+
+header {
+    display: flex;
+    height: 10%;
+    background-color: rgba(136, 136, 189, 0.5);
+    align-items: center;
+}
+
+header:hover {
+    background-color: rgba(190, 88, 238, 0.5);
+}
+
+img {
+    display: block;
+    height: 80%;
+}
+
+.img-r {
+    margin-left: auto;
+}
+
+
+article {
+    display: flex;
+    width: 70%;
+    height: 70%;
+    margin: 0px 15% 50px 15%;
+    padding: 2px 0px;
+    overflow-y: auto;
+    background-color: rgba(233, 233, 233, 0.5);
+}
+
+.col {
+    width: 50%;
+    border-left: 1px solid  black;
+    border-collapse: collapse;
+}
+
+.col-r {
+    border-right: 1px solid black;
+}
+
+.col-r {
+    border-right: 1px solid  black;
+}
+
+footer {
+    height: 15%;
+    background-color: rgba(136, 136, 189, 0.5);
+}
+
+footer:hover {
+    background-color: rgba(190, 88, 238, 1.0);
+}

@@ -1,0 +1,163 @@
+
+html, body {
+    width: 100%;
+    height: 90%;
+    margin: 0 0;
+}
+
+@media screen and (min-device-width: 1080px) {
+
+    .row1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+    }
+
+    .r1-item1 {
+        width: 33%;
+        background-color: red;
+        margin-right: 1%;
+    }
+
+    .r1-item2 {
+        width: 66%;
+        background-color: orange;
+    }
+
+    .row2 {
+        width: 100%;
+        height: 69%;
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .r2-item1 {
+        width: 100%;
+        background-color: green;
+    }
+
+   .row3 {
+        width: 100%;
+        height: 19%;
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .r3-item1{
+        width: 33%;
+        background-color: brown;
+        margin-right: 1%;
+    }
+    .r3-item2 {
+        width: 32%;
+        background-color: blue;
+        margin-right: 1%;
+    }
+    .r3-item3 {
+        width: 33%;
+        background-color: purple;
+    }
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 414px) {
+
+    .row1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+    } 
+
+    .r1-item1 {
+        width: 100%;
+        background-color: green;
+    }
+
+    .r1-item2 {
+        display: none;
+    } 
+        
+    .row2 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        margin-top: 1%;
+    } 
+
+    .r2-item1 {
+        width: 100%;
+        background-color: purple;
+    }
+
+    .row3 {
+        width: 100%;
+        height: 78%;
+        display: flex;
+        margin-top: 1%;
+    } 
+
+    .r3-item1 {
+        width: 100%;
+        background-color: red;
+    } 
+
+    .r3-item2 {
+        display: none;
+    } 
+
+    .r3-item3 {
+        display: none;
+    } 
+
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width : 1024px)  {
+
+    .row1 {
+        width: 100%;
+        height: 10%;
+        display: flex;
+    }
+
+    .r1-item1 {
+        width: 33%;
+        background-color: orange;
+        margin-right: 1%;
+    }
+
+    .r1-item2 {
+        width: 66%;
+        background-color: purple;
+    }
+
+    .row2 {
+        width: 100%;
+        height: 69%;
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .r2-item1 {
+        width: 100%;
+        background-color: red;
+    }
+
+   .row3 {
+        width: 100%;
+        height: 19%;
+        display: flex;
+        margin-top: 1%;
+    }
+
+    .r3-item1{
+        width: 49%;
+        background-color: green;
+        margin-right: 1%;
+    }
+    .r3-item2 {
+        width: 50%;
+        background-color: blue;
+    }
+    .r3-item3 {
+        display: none;
+    }
+}
