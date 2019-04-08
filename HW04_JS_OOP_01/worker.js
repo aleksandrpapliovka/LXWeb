@@ -40,7 +40,7 @@ function Worker(name, gender, birthDate, speciality, companyName, position, sala
         return _birthDate;
     }
     this.setBirthDate = function(birthDate) {
-        _birthDate = applyBirthDate(birthDate);
+        _birthDate = _applyBirthDate(birthDate);
     }
 
     this.getSpeciality = function() {
@@ -81,7 +81,7 @@ function FactoryWorker(name, gender, birthDate, speciality, companyName, positio
     var _factoryName = factoryName;
     var _factoryLocation = factoryLocation;
 
-    Worker.call(this, name, gender, birthDate, speciality, companyName, position, salary);
+    Worker.apply(this, arguments);
 
     this.getFactoryName = function() {
         return _factoryName;
@@ -104,7 +104,7 @@ function AirlinesWorker(name, gender, birthDate, speciality, companyName, positi
     var _airportName = airportName;
     var _airportLocation = airportLocation;
 
-    Worker.call(this, name, gender, birthDate, speciality, companyName, position, salary);
+    Worker.apply(this, arguments);
 
     this.getAirportName = function() {
         return _airportName;
