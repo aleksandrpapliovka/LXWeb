@@ -104,11 +104,11 @@ function onCreate(ev) {
 
     var xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-            form.dispatchEvent(new Event('submit'));
-        }
-    });
+    // xhr.addEventListener("readystatechange", function () {
+    //     if (this.readyState === 4) {
+    //         form.dispatchEvent(new Event('submit'));
+    //     }
+    // });
 
     xhr.open("POST", "http://195.50.2.67:2403/alpa-workers");
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -188,13 +188,11 @@ function onUpdate(ev) {
     xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-            document.getElementById("updateForm").dispatchEvent(new Event('submit'));
-        }
-    });
-
-    alert(uid_text);
+    // xhr.addEventListener("readystatechange", function () {
+    //     if (this.readyState === 4) {
+    //         document.getElementById("updateForm").dispatchEvent(new Event('submit'));
+    //     }
+    // });
 
     xhr.open("PUT", "http://195.50.2.67:2403/alpa-workers/"+uid_text);
     xhr.setRequestHeader("Content-Type", "application/json");
@@ -216,11 +214,11 @@ function onDelete(ev) {
     xhr = new XMLHttpRequest();
     xhr.withCredentials = true;
 
-    xhr.addEventListener("readystatechange", function () {
-        if (this.readyState === 4) {
-            form.dispatchEvent(new Event('submit'));
-        }
-    });
+    // xhr.addEventListener("readystatechange", function () {
+    //     if (this.readyState === 4) {
+    //         form.dispatchEvent(new Event('submit'));
+    //     }
+    // });
 
     xhr.open("DELETE", "http://195.50.2.67:2403/alpa-workers/" + document.getElementById("did").value);
     xhr.setRequestHeader("Content-Type", "application/json");
