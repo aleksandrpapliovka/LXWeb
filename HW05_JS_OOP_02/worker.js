@@ -5,7 +5,7 @@ function Worker(name, gender, birthDate, speciality, companyName, position, sala
     this.birthDate = Worker.convertBirthDate(birthDate);
     this.speciality = speciality;
     this.companyName = companyName;
-    this.setNameposition = position;
+    this.position = position;
     this.salary = salary;
 
 };
