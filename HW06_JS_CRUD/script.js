@@ -10,7 +10,7 @@ function Worker(name, gender, birthDate, speciality, companyName, position, sala
 
 };
 
-Worker.convertBirthDate = function (birthDate) {
+Worker.convertBirthDate = function (birthDate) {  
     var dateSplit = birthDate.split(".");
     return new Date(dateSplit[2], dateSplit[1] - 1, dateSplit[0]);
 }
