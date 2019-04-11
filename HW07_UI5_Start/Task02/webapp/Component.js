@@ -19,10 +19,6 @@ sap.ui.define(
 
                 this.setModel(new JSONModel({ recipient: { name: "World" } }));
 
-                this.setModel(new ResourceModel({
-                    bundleName: "hw07.t2.webapp.i18n.i18n"
-                }), "i18n");
-
                 // set dialog
                 this._helloDialog = new HelloDialog(this.getRootControl());
             },
