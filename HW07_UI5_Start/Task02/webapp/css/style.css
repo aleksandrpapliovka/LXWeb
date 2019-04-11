@@ -1,0 +1,12 @@
+html[dir="ltr"] .myWebapp .myCustomButton {
+    margin-right: 0.125rem;
+}
+ 
+html[dir="rtl"] .myWebapp .myCustomButton {
+    margin-left: 0.125rem;
+}
+ 
+.myWebapp .myCustomText {
+    display: inline-block;
+    font-weight: bold;
+}
