@@ -11,7 +11,7 @@ sap.ui.define([
 
 			// create
 			var oMockServer = new MockServer({
-				rootUri: "https://services.odata.org/V4/Northwind/Northwind.svc/"
+				rootUri: "https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/Northwind/Northwind.svc/"
             });
 
 			// configure mock server with a delay

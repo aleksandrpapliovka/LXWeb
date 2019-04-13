@@ -1,0 +1,82 @@
+<mvc:View controllerName="hw09.t1.webapp.controller.App" 
+  xmlns="sap.m" 
+  xmlns:l="sap.ui.layout" 
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns:core="sap.ui.core" displayBlock="true">
+
+  <Panel headerText="{/panel1HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <content>
+      <Label text="{i18n>firstName}" class="sapUiSmallMargin" />
+      <Input value="{persData>/firstName}" valueLiveUpdate="true" width="200px" enabled="{/button/enabled}" />
+      <Label text="{i18n>lastName}" class="sapUiSmallMargin" />
+      <Input value="{path: 'persData>/lastName'}" valueLiveUpdate="true" width="200px" enabled="{/button/enabled}" />
+      <CheckBox selected="{/button/enabled}" text="{i18n>enabled}" />
+    </content>
+  </Panel>
+
+  <Panel headerText="{i18n>panel2HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <content>
+      <l:HorizontalLayout>
+        <l:VerticalLayout>
+          <Label class="sapUiSmallMargin" text="{i18n>address}:"/>
+          <FormattedText class="sapUiSmallMarginBegin sapUiSmallMarginBottom" htmlText="{persData>/address/street}&lt;br&gt;{persData>/address/zip} {persData>/address/city}&lt;br&gt;{persData>/address/country}" width="200px"/>
+          <Link class="sapUiSmallMarginBegin" href="{
+							parts: [
+								'persData>/firstName',
+								'persData>/lastName'
+							],
+							formatter: '.formatMail'
+						}" text="{i18n>sendEmail}"/>
+        </l:VerticalLayout>
+        <l:VerticalLayout>
+          <Label text="{i18n>salesToDate}:" class="sapUiSmallMargin"/>
+          <Input width="200px" enabled="{/button/enabled}" description="{persData>/currencyCode}" value="{
+							parts: [
+								{path: 'persData>/salesToDate'},
+								{path: 'persData>/currencyCode'}
+							],
+							type: 'sap.ui.model.type.Currency',
+							formatOptions: {showMeasure: false}
+						}"/>
+        </l:VerticalLayout>
+      </l:HorizontalLayout>
+    </content>
+  </Panel>
+	<Panel headerText="{i18n>panel3HeaderText}" class="sapUiResponsiveMargin" width="auto">
+		<content>
+			<List
+				id="ProductList"
+				headerText="{i18n>productListTitle}"
+				items="{
+					path: 'products>/Products',
+					factory: '.productListFactory'
+				}">
+				<dependents>
+					<core:Fragment fragmentName="hw09.t1.webapp.view.ProductSimple" type="XML"/>
+					<core:Fragment fragmentName="hw09.t1.webapp.view.ProductExtended" type="XML"/>
+				</dependents>
+			</List>
+		</content>
+	</Panel>  
+  <Panel id="productDetailsPanel" headerText="{i18n>panel4HeaderText}" class="sapUiResponsiveMargin" width="auto">
+    <l:Grid defaultSpan="L3 M6 S12" containerQuery="true">
+        <Label text="{i18n>ProductID}:" />
+        <Input value="{products>ProductID}" />
+        
+        <Label text="{i18n>ProductName}:" />
+        <Input value="{products>ProductName}" />
+
+        <Label text="{i18n>QuantityPerUnit}:" />
+        <Input value="{products>QuantityPerUnit}" />
+        
+        <Label text="{i18n>UnitPrice}:" />
+        <Input value="{products>UnitPrice}" />
+        
+        <Label text="{i18n>UnitsInStock}:" />
+        <Input value="{products>UnitsInStock}" />
+        
+        <Label text="{i18n>Discontinued}:" />
+        <CheckBox selected="{products>Discontinued}" />
+    </l:Grid>    
+  </Panel>
+</mvc:View>

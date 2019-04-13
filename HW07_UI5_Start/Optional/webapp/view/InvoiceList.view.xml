@@ -7,7 +7,7 @@
       class="sapUiResponsiveMargin"
       width="auto"
 		items="{
-			path : 'invoice>/Invoice',
+			path : 'invoice>/Invoices',
 			sorter : {
 				path : 'ShipperName',
 				group : true

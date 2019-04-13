@@ -1,22 +1,13 @@
 {
 	"_version": "1.12.0",
 	"sap.app": {
-		"id": "hw07.t2.webapp",
+		"id": "hw09.t1.webapp",
 		"type": "application",
 		"i18n": "i18n/i18n.properties",
 		"title": "{{appTitle}}",
 		"description": "{{appDescription}}",
 		"applicationVersion": {
 			"version": "1.0.0"
-		},
-		"dataSources": {
-			"invoiceRemote": {
-				"uri": "https://cors-anywhere.herokuapp.com/https://services.odata.org/V2/Northwind/Northwind.svc/",
-				"type": "OData",
-				"settings": {
-					"odataVersion": "2.0"
-				}
-			}
 		}
 	},
 	"sap.ui": {
@@ -29,7 +20,7 @@
 	},
 	"sap.ui5": {
 		"rootView": {
-			"viewName": "hw07.t2.webapp.view.App",
+			"viewName": "hw09.t1.webapp.view.App",
 			"type": "XML",
 			"async": true,
 			"id": "app"
@@ -44,19 +35,19 @@
 			"i18n": {
 				"type": "sap.ui.model.resource.ResourceModel",
 				"settings": {
-					"bundleName": "hw07.t2.webapp.i18n.i18n"
+					"bundleName": "hw09.t1.webapp.i18n.i18n"
 				}
 			},
-			"invoice": {
-				"dataSource": "invoiceRemote"
-			}
-		},
-		"resources": {
-			"css": [
-				{
-					"uri": "css/style.css"
-				}
-			]
+
+			"persData": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/PersData.json"
+			},
+
+			"products": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "./model/Products.json"
+			}			
 		}
 	}
 }
