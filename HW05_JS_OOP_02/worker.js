@@ -124,7 +124,7 @@ AirlinesWorker.prototype.getAirportLocation = function() {
     return this.airportLocation;
 }
 AirlinesWorker.prototype.setAirportLocation = function(airportLocation) {
-    this.airportLocation = airoprtLocation;
+    this.airportLocation = airportLocation;
 }
 
 AirlinesWorker.prototype.getAge = function() {
